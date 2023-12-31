@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yAyH3Hs83HjOtB6BJOD5XvfM4Hk8bpANNYwYlkV/pqI4FTEzpH03FyX0keNGF1md6ny3Jr1qcJRvFFT5sZzUtw==",
+  "dgSpecHash": "/7YC7CpMNVYFI/TZh1NlDSXW+Jm/dYRiicyrJFveQ+CPPVqhG/azIFCcLTyz1Qgmehaonikx3JxZZ4QTa9xToQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\onisk\\OneDrive\\Документы\\4C\\4C\\4C\\4C.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\onisk\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
