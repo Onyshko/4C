@@ -18,35 +18,30 @@
         <userControls:NavigationBar/>
         
         <!--Content-->
-        <ListView Name="lvAssets" Grid.Row="1" ItemsSource="{Binding Assets}">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="ID">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Id}" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
+        <ListBox Name="lbAssets"
+                 Width="400" Margin="10"
+                 Grid.Row="1"
+                 ItemsSource="{Binding Assets}"
+                 Background="Transparent"
+                 BorderBrush="Transparent"
+                 SelectedItem="{Binding SelectedAsset, Mode=TwoWay}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="300"/>
+                            <ColumnDefinition Width="40" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Rank}" FontSize="16" FontWeight="Light"/>
+                        <TextBlock Text="{Binding Name}" Grid.Column="1" FontSize="16" FontWeight="Light"/>
+                        <TextBlock Text="{Binding Symbol}" Grid.Column="2" FontSize="16" FontWeight="Light"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
-                    <GridViewColumn Header="Name">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Name}" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
 
-                    <GridViewColumn Header="Symbol">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Symbol}" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                </GridView>
-            </ListView.View>
-        </ListView>
 
         <!--Footer-->
         

@@ -1,6 +1,4 @@
-﻿using _4C.Model;
-using _4C.ViewModel;
-using System.Threading.Tasks;
+﻿using _4C.ViewModel;
 using System.Windows;
 
 namespace _4C

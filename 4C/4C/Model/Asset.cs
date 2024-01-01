@@ -2,7 +2,7 @@
 
 namespace _4C.Model
 {
-    class Asset
+    public class Asset
     {
         [JsonProperty("id")]
         public string Id { get; set; }

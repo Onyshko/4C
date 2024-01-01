@@ -26,3 +26,8 @@ C:\Users\onisk\OneDrive\Документы\4C\4C\4C\obj\Debug\net7.0-windows\Vie
 C:\Users\onisk\OneDrive\Документы\4C\4C\4C\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\onisk\OneDrive\Документы\4C\4C\4C\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
 C:\Users\onisk\OneDrive\Документы\4C\4C\4C\obj\Debug\net7.0-windows\4C.csproj.CopyComplete
+C:\Users\onisk\OneDrive\Документы\4C\4C\4C\obj\Debug\net7.0-windows\View\DetailsWindow.g.cs
+C:\Users\onisk\OneDrive\Документы\4C\4C\4C\obj\Debug\net7.0-windows\View\DetailsWindow.baml
+C:\Users\onisk\OneDrive\Документы\4C\4C\4C\obj\Debug\net7.0-windows\Styles\DetailsTextBlockStyle.baml
+C:\Users\onisk\OneDrive\Документы\4C\4C\4C\bin\Debug\net7.0-windows\LiveCharts.dll
+C:\Users\onisk\OneDrive\Документы\4C\4C\4C\bin\Debug\net7.0-windows\LiveCharts.Wpf.dll
