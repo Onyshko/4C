@@ -1,31 +1,24 @@
 ﻿using _4C.Model;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+using _4C.ViewModel;
 using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Navigation;
 using System.Windows.Documents;
+using System.Windows.Navigation;
 
 namespace _4C.View
 {
     public partial class DetailsWindow : Window
     {
-        public ObservableCollection<Market> Markets { get; set; }
-        public ObservableCollection<History> Histories { get; set; }
-
         public DetailsWindow(Asset asset)
         {
             InitializeComponent();
-            Markets = new ObservableCollection<Market>();
-            Histories = new ObservableCollection<History>();
+
+            var viewModel = new DetailsWindowViewModel(asset);
             GeneratePropertiesUI(asset);
-            InitializeMarketsByCurrencyAsync(asset).ConfigureAwait(false);
-            InitializeHistoryOfCurrencyAsync(asset).ConfigureAwait(false);
-            DataContext = this;
+            DataContext = viewModel;
         }
+
         private void GeneratePropertiesUI(Asset asset)
         {
             if (asset == null) return;
@@ -46,38 +39,6 @@ namespace _4C.View
                 textBlock.Style = (Style)Application.Current.FindResource("tbDetails");
 
                 PropertiesPanel.Children.Add(textBlock);
-            }
-        }
-
-        public async Task InitializeMarketsByCurrencyAsync(Asset asset)
-        {
-            try
-            {
-                var loadedMarkets = await DataFromApi.GetMarketsByCurrency(asset.Id);
-                foreach (var market in loadedMarkets)
-                {
-                    Markets.Add(market);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Помилка при завантаженні даних: {ex.Message}");
-            }
-        }
-
-        public async Task InitializeHistoryOfCurrencyAsync(Asset asset)
-        {
-            try
-            {
-                var loadedHistories = await DataFromApi.GetHistoryOfCurrency(asset.Id);
-                foreach (var history in loadedHistories)
-                {
-                    Histories.Add(history);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Помилка при завантаженні даних: {ex.Message}");
             }
         }
 
