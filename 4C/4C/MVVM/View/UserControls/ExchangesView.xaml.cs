@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _4C.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,13 @@ using System.Windows.Shapes;
 
 namespace _4C.MVVM.View.UserControls
 {
-    /// <summary>
-    /// Interaction logic for ExchangesView.xaml
-    /// </summary>
     public partial class ExchangesView : UserControl
     {
         public ExchangesView()
         {
             InitializeComponent();
+            var exchangesViewModel = new ExchangesViewModel();
+            DataContext = exchangesViewModel;
         }
     }
 }
