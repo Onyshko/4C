@@ -7,6 +7,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <local:ClearableTextBox 
+            x:Name="ctbSearch"
+            Height="30" Width="150" VerticalAlignment="Top" 
+            HorizontalAlignment="Left" Margin="15,15,0,0" 
+            Placeholder="Search" Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Button Width="150" Height="30" Content="Search" 
+                Click="Search_Button" Margin="15,60,0,0"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                FontSize="16" FontWeight="Light" Foreground="#222222"
+                Background="LightGray"/>
+
         <ListBox Name="lbAssets"
                  Width="400" Margin="10"
                  ItemsSource="{Binding Assets}"
@@ -17,7 +29,7 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="25"/>
                             <ColumnDefinition Width="300"/>
                             <ColumnDefinition Width="40" />
                         </Grid.ColumnDefinitions>

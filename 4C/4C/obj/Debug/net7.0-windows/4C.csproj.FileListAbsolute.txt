@@ -35,3 +35,5 @@ C:\Users\onisk\OneDrive\Документы\4C\4C\4C\obj\Debug\net7.0-windows\MVV
 C:\Users\onisk\OneDrive\Документы\4C\4C\4C\obj\Debug\net7.0-windows\MVVM\View\UserControls\ExchangesView.baml
 C:\Users\onisk\OneDrive\Документы\4C\4C\4C\obj\Debug\net7.0-windows\MVVM\View\UserControls\HomeView.baml
 C:\Users\onisk\OneDrive\Документы\4C\4C\4C\obj\Debug\net7.0-windows\MVVM\View\UserControls\NavigationBar.baml
+C:\Users\onisk\OneDrive\Документы\4C\4C\4C\obj\Debug\net7.0-windows\MVVM\View\UserControls\ClearableTextBox.g.cs
+C:\Users\onisk\OneDrive\Документы\4C\4C\4C\obj\Debug\net7.0-windows\MVVM\View\UserControls\ClearableTextBox.baml

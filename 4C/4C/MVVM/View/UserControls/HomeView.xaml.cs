@@ -1,5 +1,6 @@
 ﻿using _4C.MVVM.ViewModel;
 using System.Windows.Controls;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace _4C.MVVM.View.UserControls
 {
@@ -8,8 +9,13 @@ namespace _4C.MVVM.View.UserControls
         public HomeView()
         {
             InitializeComponent();
-            var homeViewModel = new HomeViewModel();
-            Loaded += async (sender, e) => await homeViewModel.InitializeAsync();
+            var homeViewModel = new HomeViewModel(ctbSearch.Text);
+            DataContext = homeViewModel;
+        }
+
+        private void Search_Button(object sender, System.Windows.RoutedEventArgs e)
+        {
+            var homeViewModel = new HomeViewModel(ctbSearch.Text);
             DataContext = homeViewModel;
         }
     }

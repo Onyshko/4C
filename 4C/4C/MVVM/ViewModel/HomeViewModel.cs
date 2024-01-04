@@ -24,20 +24,36 @@ namespace _4C.MVVM.ViewModel
             }
         }
 
-        public HomeViewModel()
+        private string _text;
+
+        public string Text
         {
-            Assets = new ObservableCollection<Asset>();
+            get { return _text; }
+            set
+            {
+                _text = value;
+                OnPropertyChanged(nameof(Text));
+            }
         }
 
-        public async Task InitializeAsync()
+        public HomeViewModel(string searchText)
+        {
+            Assets = new ObservableCollection<Asset>();
+            InitializeAsync(searchText);
+        }
+
+        public async Task InitializeAsync(string searchText)
         {
             try
             {
                 var loadedAssets = await DataFromApi.GetTopListCurrencies();
                 var sortedAssets = new ObservableCollection<Asset>(loadedAssets.OrderBy(i => i.Rank));
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < sortedAssets.Count; i++)
                 {
-                    Assets.Add(sortedAssets[i]);
+                    if (searchText == null)
+                        Assets.Add(sortedAssets[i]);
+                    else if (sortedAssets[i].Name.Contains(searchText) || sortedAssets[i].Id.Contains(searchText))
+                        Assets.Add(sortedAssets[i]);
                 }
             }
             catch (Exception ex)

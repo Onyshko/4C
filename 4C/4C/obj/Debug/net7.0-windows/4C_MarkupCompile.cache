@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\onisk\OneDrive\Документы\4C\4C\4C\App.xaml
-7-1746787372
+8-1355562751
 
-18783677750
+191339789451
 201615838868
-MainWindow.xaml;MVVM\Styles\DetailsTextBlockStyle.xaml;MVVM\Styles\NavigationBarButtonStyles.xaml;MVVM\View\DetailsWindow.xaml;MVVM\View\UserControls\ExchangesView.xaml;MVVM\View\UserControls\HomeView.xaml;MVVM\View\UserControls\NavigationBar.xaml;
+MainWindow.xaml;MVVM\Styles\DetailsTextBlockStyle.xaml;MVVM\Styles\NavigationBarButtonStyles.xaml;MVVM\View\DetailsWindow.xaml;MVVM\View\UserControls\ClearableTextBox.xaml;MVVM\View\UserControls\ExchangesView.xaml;MVVM\View\UserControls\HomeView.xaml;MVVM\View\UserControls\NavigationBar.xaml;
 
 False
 
