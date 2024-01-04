@@ -1,16 +1,17 @@
-﻿using _4C.ViewModel;
+﻿using _4C.MVVM.ViewModel;
+using _4C.Services.Implementation;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace _4C
 {
     public partial class MainWindow : Window
     {
+        public Frame MainFrame { get { return this.MainContentFrame; } }
+
         public MainWindow()
         {
             InitializeComponent();
-            MainWindowViewModel mainWindowViewModel = new MainWindowViewModel();
-            Loaded += async (sender, e) => await mainWindowViewModel.InitializeAsync();
-            DataContext = mainWindowViewModel;
         }
     }
 }

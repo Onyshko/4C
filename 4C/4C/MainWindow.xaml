@@ -4,10 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_4C"
-        xmlns:userControls="clr-namespace:_4C.View.UserControls"
+        xmlns:userControls="clr-namespace:_4C.MVVM.View.UserControls"
         mc:Ignorable="d"
         Title="4C" Height="450" Width="800">
     <Grid Background="LightBlue">
+
+        
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition/>
@@ -16,34 +19,8 @@
 
         <!--Navigation Bar-->
         <userControls:NavigationBar/>
-        
-        <!--Content-->
-        <ListBox Name="lbAssets"
-                 Width="400" Margin="10"
-                 Grid.Row="1"
-                 ItemsSource="{Binding Assets}"
-                 Background="Transparent"
-                 BorderBrush="Transparent"
-                 SelectedItem="{Binding SelectedAsset, Mode=TwoWay}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="20"/>
-                            <ColumnDefinition Width="300"/>
-                            <ColumnDefinition Width="40" />
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding Rank}" FontSize="16" FontWeight="Light"/>
-                        <TextBlock Text="{Binding Name}" Grid.Column="1" FontSize="16" FontWeight="Light"/>
-                        <TextBlock Text="{Binding Symbol}" Grid.Column="2" FontSize="16" FontWeight="Light"/>
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
 
+        <Frame Grid.Row="1" x:Name="MainContentFrame" NavigationUIVisibility="Hidden"/>
 
-
-        <!--Footer-->
-        
     </Grid>
 </Window>

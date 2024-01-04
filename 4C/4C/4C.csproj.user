@@ -7,10 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="View\DetailsWindow.xaml.cs">
+    <Compile Update="MVVM\View\DetailsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\UserControls\NavigationBar.xaml.cs">
+    <Compile Update="MVVM\View\UserControls\ExchangesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\UserControls\HomeView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\UserControls\NavigationBar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -18,16 +24,22 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Styles\DetailsTextBlockStyle.xaml">
+    <Page Update="MVVM\Styles\DetailsTextBlockStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Styles\NavigationBarButtonStyles.xaml">
+    <Page Update="MVVM\Styles\NavigationBarButtonStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\DetailsWindow.xaml">
+    <Page Update="MVVM\View\DetailsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\UserControls\NavigationBar.xaml">
+    <Page Update="MVVM\View\UserControls\ExchangesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\UserControls\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\UserControls\NavigationBar.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

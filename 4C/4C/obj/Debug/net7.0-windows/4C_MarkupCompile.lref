@@ -1,6 +1,8 @@
 ﻿
 FC:\Users\onisk\OneDrive\Документы\4C\4C\4C\App.xaml;;
 FC:\Users\onisk\OneDrive\Документы\4C\4C\4C\MainWindow.xaml;;
-FC:\Users\onisk\OneDrive\Документы\4C\4C\4C\View\DetailsWindow.xaml;;
-FC:\Users\onisk\OneDrive\Документы\4C\4C\4C\View\UserControls\NavigationBar.xaml;;
+FC:\Users\onisk\OneDrive\Документы\4C\4C\4C\MVVM\View\DetailsWindow.xaml;;
+FC:\Users\onisk\OneDrive\Документы\4C\4C\4C\MVVM\View\UserControls\ExchangesView.xaml;;
+FC:\Users\onisk\OneDrive\Документы\4C\4C\4C\MVVM\View\UserControls\HomeView.xaml;;
+FC:\Users\onisk\OneDrive\Документы\4C\4C\4C\MVVM\View\UserControls\NavigationBar.xaml;;
 
