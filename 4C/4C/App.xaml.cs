@@ -10,9 +10,6 @@ using System.Windows;
 
 namespace _4C
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
     {
         protected override void OnStartup(StartupEventArgs e)
@@ -21,8 +18,8 @@ namespace _4C
 
             var mainWindow = new MainWindow();
             var navigationService = new NavigationService(mainWindow.MainFrame);
-            var mainWindowViewModel = new MainWindowViewModel(navigationService);
-            mainWindow.DataContext = mainWindowViewModel;
+            var navigationBarViewModel = new NavigationBarViewModel(navigationService);
+            mainWindow.DataContext = navigationBarViewModel;
             mainWindow.Show();
         }
     }

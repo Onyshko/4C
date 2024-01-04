@@ -1,24 +1,15 @@
-﻿using _4C.Model;
-using _4C.MVVM;
-using _4C.MVVM.View;
-using _4C.Services.Interfaces;
-using System;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using _4C.Services.Interfaces;
 using System.Windows.Input;
 
 namespace _4C.MVVM.ViewModel
 {
-    class MainWindowViewModel : ViewModelBase
+    public class NavigationBarViewModel
     {
         private INavigationService _navigationService;
         public ICommand NavigateHomeCommand { get; }
         public ICommand NavigateExchangesCommand { get; }
-        
 
-        public MainWindowViewModel(INavigationService navigationService)
+        public NavigationBarViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
             NavigateHomeCommand = new RelayCommand(param => NavigateHome());
